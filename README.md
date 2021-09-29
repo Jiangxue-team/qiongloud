@@ -4,7 +4,7 @@ CSS&JS 组件库(Component library) 基于 JT214-2 提案下的通用框架项�
 
 ## gridSystem
 ### overallArrangement
-#### ven-pers
+#### ven-per
 整体布局提供了 ```<ven-per>``` 组件用于 ```10~100%``` 之间的布局宽度，可通过 ```wide``` 属性进行调整。
 
 > 除此之外还提供了 ```<ven-pers>``` 指令，用于支持自定义布局宽度，同样使用 ```wide``` 属性进行调整。
