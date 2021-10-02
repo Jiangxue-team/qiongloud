@@ -34,7 +34,7 @@ export default {
 
 ### mainLayout
 #### ven-header
-横向布局组件通过 ```gap``` 属性实现了栅格数量的划分，并可以通过 DOM attribute 来自适应布局大小。
+横向布局组件通过 ```gap``` 属性实现了栅格数量的划分，并使用 DOM attribute 来自适应布局大小，默认情况下支持 1920~320 大小的设备显示。
 
 ```js
 <template>
