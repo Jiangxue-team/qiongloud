@@ -31,3 +31,29 @@ export default {
 }
 </script>
 ```
+
+### mainLayout
+#### ven-header
+横向布局组件通过 ```gap``` 属性实现了栅格数量的划分，并可以通过 DOM attribute 来自适应布局大小。
+
+```js
+<template>
+  <ven-header gap="4">
+    <div>1</div>
+    <div>2</div>
+    <div>4</div>
+    <div>5</div>
+  </ven-header>
+</template>
+
+<script>
+import venHeader from './components/gridSystem/mainLayout/venHeader.vue'
+
+export default {
+  name: 'App',
+  components: {
+    venHeader
+  }
+}
+</script>
+```
