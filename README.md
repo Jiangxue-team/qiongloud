@@ -57,3 +57,26 @@ export default {
 }
 </script>
 ```
+
+#### ven-main
+主要布局组件 ```ven-main``` 可支持主体位置以及组件的图层位置，这通常可以使用 ```site```  来调整该区域属性的位置，目前已经可提供 ```center``` 以及 ```left``` 和 ```right``` 的支持。
+
+
+```js
+<template>
+  <ven-main site="left">
+    <div>1</div>
+  </ven-main>
+</template>
+
+<script>
+import VenMain from "./components/gridSystem/mainLayout/venMain";
+
+export default {
+  name: 'App',
+  components: {
+    VenMain
+  }
+}
+</script>
+```
