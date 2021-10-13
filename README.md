@@ -2,8 +2,8 @@
 
 CSS&JS 组件库(Component library) 基于 JT214-2 提案下的通用框架项目，由 venue.js（审判地）作为最终实现。为之后的所有提案提供通用的组件和样式，保持 Jiangxue TEAM 的设计一致性和视觉效果，通过 Vue 3.0 和 D3 数据可视化框架分别提供视图的渲染和数据可视化的支持。
 
-## gridSystem
-### overallArrangement
+## Grid System
+### Overall Arrangement
 #### ven-per
 整体布局提供了 ```<ven-per>``` 组件用于 ```10~100%``` 之间的布局宽度，可通过 ```wide``` 属性进行调整。
 
@@ -32,7 +32,7 @@ export default {
 </script>
 ```
 
-### mainLayout
+### Main Layout
 #### ven-header
 横向布局组件通过 ```gap``` 属性实现了栅格数量的划分，并使用 DOM attribute 来自适应布局大小，默认情况下支持 1920~320 大小的设备显示。
 
@@ -80,3 +80,60 @@ export default {
 }
 </script>
 ```
+
+## Modular Design
+### Navigation Component
+#### ven-bread
+面包屑，通过 ```ven-bread``` 组件进行添加和使用，可通过 ```loaf[true,false]``` method 来决定是否使用面包屑。
+
+他的主要作用是在 Navigation link 过多的时候自动进行折叠，并通过 bread 来进行 show/close。
+
+```js
+<template>
+    <ven-header gap="2" class="vavigation-con vavigation-link" style="max-width: 100%;">
+      <div style="height: 100%;display: flex;">
+        <ven-logo img="https://gitee.com/analysis-of-river-snow/drawing-bed/raw/master/20211012105711.png"></ven-logo>
+      </div>
+      <div>
+        <ven-nav>
+          <ven-main site="-webkit-right" class="vavigation-link">
+            <ven-bread :loaf="true">
+              <a href="#">Link1</a>
+              <a href="#">Link2</a>
+              <a href="#">Link3</a>
+              <a href="#">Link4</a>
+              <a href="#">Link5</a>
+              <a href="#">Link6</a>
+              <a href="#">Link7</a>
+              <a href="#">Link8</a>
+              <a href="#">Link9</a>
+            </ven-bread>
+          </ven-main>
+        </ven-nav>
+      </div>
+    </ven-header>
+</template>
+<script>
+import VenHeader from "./components/gridSystem/mainLayout/venHeader";
+import VenMain from "./components/gridSystem/mainLayout/venMain";
+import VenBread from "./components/modularDesign/navigationComponent/venBread";
+import VenNav from "./components/modularDesign/navigationComponent/venNav";
+import VenLogo from "./components/modularDesign/navigationComponent/venLogo";
+export default {
+  name: 'App',
+  components: {
+    VenLogo,
+    VenNav,
+    VenBread,
+    VenMain,
+    VenHeader,
+  }
+}
+</script>
+```
+
+#### ven-logo
+通过 ```img``` 函数让 ```ven-logo``` 组件添加 Logo，并自动进行适配。
+
+#### ven-nav
+将 ```ven-bread``` 进行包裹形成框架，使得其可通过 ```ven-nav``` 来进行适配
