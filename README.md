@@ -137,3 +137,62 @@ export default {
 
 #### ven-nav
 将 ```ven-bread``` 进行包裹形成框架，使得其可通过 ```ven-nav``` 来进行适配
+
+### Navigation Link
+#### ven-son
+```ven-son``` 组件通过 ```title``` method 以及 ```son``` method 分别实现父导航和子导航的绑定，假设 ```title``` 为 ```fat``` ：
+
+```
+<ven-son title="fat" son="son">
+	// link ……
+</ven-son>
+```
+
+则 ``` // link``` 处将会绑定 ```son```  method parameter ，而 ```title``` 内的 parameter 则绑定为 ```fat``` 作为父导航，```son``` 为子导航，你可以配合Navigation Component 组件进行使用。
+
+```js
+<template>
+  <ven-header gap="2" class="vavigation-con vavigation-link" style="max-width: 100%;">
+      <ven-logo img="https://gitee.com/analysis-of-river-snow/drawing-bed/raw/master/20211012105711.png"></ven-logo>
+      <ven-nav>
+        <ven-main site="-webkit-right" class="vavigation-link">
+          <ven-bread :loaf="true">
+            <a href="#">Introduction</a>
+            <a href="#">Business</a>
+            <ven-son title="Staff" son="1">
+              <a href="">Link sonOne</a>
+              <a href="">Link sonOno</a>
+              <a href="">Link sonOne</a>
+            </ven-son>
+            <ven-son title="Corporate Responsibility" son="2">
+              <a href="">Link sonTwo</a>
+              <a href="">Link sonTwo</a>
+              <a href="">Link sonTwo</a>
+            </ven-son>
+            <a href="#">Investor</a>
+            <a href="#">Media</a>
+          </ven-bread>
+        </ven-main>
+      </ven-nav>
+  </ven-header>
+</template>
+<script>
+import VenHeader from "./components/gridSystem/mainLayout/venHeader";
+import VenMain from "./components/gridSystem/mainLayout/venMain";
+import VenBread from "./components/modularDesign/navigationComponent/venBread";
+import VenNav from "./components/modularDesign/navigationComponent/venNav";
+import VenLogo from "./components/modularDesign/navigationComponent/venLogo";
+import VenSon from "./components/modularDesign/navigationComponent/navigationLink/venSon";
+export default {
+  name: 'App',
+  components: {
+    VenLogo,
+    VenNav,
+    VenBread,
+    VenMain,
+    VenHeader,
+    VenSon
+  }
+}
+</script>
+```
