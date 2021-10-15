@@ -135,7 +135,7 @@ export default {
       return document.getElementById('v-con').style.gridTemplate = 'repeat(1,auto)/repeat(2,minmax(auto, 100%))'
     },
     gapsSpan320__10() {
-      return document.getElementById('v-con').style.gridTemplate = 'repeat(1,auto)/repeat(1,minmax(auto, 100%))'
+      return document.getElementById('v-con').style.gridTemplate = 'repeat(1,auto)/repeat(2,minmax(auto, 100%))'
     }
   }
 }
