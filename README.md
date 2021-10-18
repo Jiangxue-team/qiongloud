@@ -196,3 +196,30 @@ export default {
 }
 </script>
 ```
+
+## Basic Components
+### ven-color
+我们提供了多种颜色可以进行搭配，这主要通过 ```col```  methood 或 ```spa``` method 来进行选择颜色或过滤度，之后 通过  ```back``` method 来选择是否应用与颜色或背景中。
+
+1. red
+2. blue
+3. green
+4. blue-green
+4. white
+5. black
+6. yellow
+
+```js
+<template>
+    <h1><ven-color col="blue" spa="1" :back="true">Hello,world</ven-color></h1>
+</template>
+<script>
+import VenColor from "./components/basicComponents/venColor";
+export default {
+  name: 'App',
+  components: {
+    VenColor
+  }
+}
+</script>
+```
