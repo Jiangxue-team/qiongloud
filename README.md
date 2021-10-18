@@ -223,3 +223,24 @@ export default {
 }
 </script>
 ```
+
+### ven-font
+字体间的大小和行高都会给用户带来最直观的视觉显示，通过 ```size``` 以及 ```row``` method 可以快速调节文字的行高以及大小等，使得更符合规范。
+
+```js
+<template>
+  <div style="margin: 5%">
+    <ven-font size="h1" row="0.1">Component library H1</ven-font>
+    <ven-font>CSS&JS component library (Component library) is based on the general framework project under the JT214-2 proposal, and is finally implemented by venue.js (trial site). Provide common components and styles for all subsequent proposals, maintain the design consistency and visual effects of Jiangxue TEAM, and provide support for view rendering and data visualization through Vue 3.0 and D3 data visualization frameworks.</ven-font>
+  </div>
+</template>
+<script>
+import VenFont from "./components/basicComponents/ven-font";
+export default {
+  name: 'App',
+  components: {
+    VenFont,
+  }
+}
+</script>
+```
