@@ -281,3 +281,25 @@ export default {
 }
 </style>
 ```
+
+### ven-link
+为链接所提供的组件，有三种不同种类的正式场合样式，分别为 ```nor``` 和 ```ico``` 以及 ```hoz```，可通过 ```to``` method 来指定跳转 uri。
+
+```js
+<template>
+  <div style="margin: 5%;">
+    <ven-link to="https://baidu.com/" type="nor" style="padding: 1em">http://www.baidu.com</ven-link>
+    <ven-link to="https://baidu.com/" type="ico" style="padding: 1em">http://www.baidu.com</ven-link>
+    <ven-link to="https://baidu.com/" type="hoz" style="padding: 1em">http://www.baidu.com</ven-link>
+  </div>
+</template>
+<script>
+import VenLink from "./components/basicComponents/venLink";
+export default {
+  name: 'App',
+  components: {
+    VenLink
+  }
+}
+</script>
+```
