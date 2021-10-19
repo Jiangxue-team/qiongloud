@@ -244,3 +244,40 @@ export default {
 }
 </script>
 ```
+
+### ven-button
+```ven-button``` 组件支持 ```ven-color``` method 即 ```col``` 和 ```spa``` 还有 ```:back``` 以及在此基础上所添加的 ```font``` method ，用于选择文字的颜色。同时还有 ```ico``` method ，用于添加按钮 icon ，可直接在该 method 参数中填写 icon 的 url。
+
+```js
+<template>
+  <div style="margin: 5%">
+    <ven-font size="h1" row="0.1">Component library ven-button</ven-font>
+    <ven-button spa="1" col="blue" :back="false" font="white" ico="https://gitee.com/analysis-of-river-snow/drawing-bed/raw/master/20211019085429.png" class="basic-padding">Update1</ven-button>
+    <ven-button spa="8" col="blue" :back="false" font="white" class="basic-padding">Update3</ven-button>
+    <ven-button spa="1" :back="false" font="blue" class="basic-padding" ico="https://gitee.com/analysis-of-river-snow/drawing-bed/raw/master/20211019081306.png">Update4</ven-button>
+    <ven-button spa="4" :back="false" font="red" class="basic-padding">Update5</ven-button>
+
+    <ven-font size="h1" row="0.1">Icon</ven-font>
+    <ven-button spa="9" :back="false" font="white" class="basic-padding" style="padding: 0" ico="https://gitee.com/analysis-of-river-snow/drawing-bed/raw/master/20211019081306.png"></ven-button>
+  </div>
+</template>
+<script>
+import VenFont from "./components/basicComponents/venFont";
+import VenButton from "./components/basicComponents/venButton";
+export default {
+  name: 'App',
+  components: {
+    VenButton,
+    VenFont,
+  }
+}
+</script>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+.basic-padding {
+  margin-right: 1em;
+}
+</style>
+```
